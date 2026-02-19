@@ -98,6 +98,43 @@ Or run the comprehensive test script to install dependencies, run tests, and ver
 python scripts/run_and_test.py
 ```
 
+### Demo
+
+Run the interactive demo to see the RL agent managing a project in real-time:
+
+```bash
+python scripts/demo.py
+```
+
+Or use the enhanced demo with agent comparison:
+
+```bash
+# Single agent demo
+python scripts/demo_enhanced.py --agent adaptive
+
+# Compare multiple agents
+python scripts/demo_enhanced.py --compare --episodes 5
+```
+
+This will show live updates of task assignments, worker fatigue, and project progress, followed by performance plots.
+
+## 📚 Improvements & Enhancements
+
+This project has been enhanced with comprehensive testing, new AI agents, and improved demos.
+
+**See [COMPLETE_GUIDE.md](COMPLETE_GUIDE.md) for everything you need to know** - compressed reference with all key information.
+
+For more detailed information:
+- [QUICK_START.md](QUICK_START.md) - Command examples and quick reference
+- [TESTS_AND_AGENTS.md](TESTS_AND_AGENTS.md) - Detailed agent & test documentation
+- [IMPROVEMENTS.md](IMPROVEMENTS.md) - Complete changelog
+
+### Key Improvements
+- ✅ 40+ comprehensive test cases
+- ✅ 3 new AI agents (Adaptive, PrioritizedGreedy, LoadBalancing)  
+- ✅ Enhanced demo with agent comparison
+- ✅ Fixed bugs and improved code quality
+
 ## 📚 API Documentation
 
 Once the server is running, visit `http://localhost:8000/docs` for the interactive Swagger UI.
