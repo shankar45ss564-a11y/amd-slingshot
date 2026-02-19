@@ -101,16 +101,4 @@ class RLEnvironment:
 
     def action_space_sample(self):
         """Helper to return a random valid action (stub)"""
-        # Build list of possible assign actions
-        state = self.simulation.get_state()
-        workers = [w for w in state["workers"] if not w["current_task_id"]]
-        tasks = [t for t in state["tasks"] if t["status"] in ["TODO", "IN_PROGRESS"]]
-
-        # If no workers or no tasks, sample a wait action
-        if not workers or not tasks:
-            return {"type": "wait", "hours": 1.0}
-
-        # Pick random worker and task
-        w = np.random.choice(workers)
-        t = np.random.choice(tasks)
-        return {"type": "assign", "worker_id": w["id"], "task_id": t["id"]}
+        pass
