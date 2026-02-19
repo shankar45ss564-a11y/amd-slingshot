@@ -325,3 +325,11 @@ if __name__ == "__main__":
     from training.visualize import plot_learning_curve
     plot_learning_curve()
     print("✓ Learning curve saved to results/learning_curve.png")
+
+# Key hyperparameters:
+# max_episodes=2000
+# min_replay_size=1000
+# learning_rate=0.0005
+# reward_scale=0.1
+# early_stopping_patience=200
+# moving_avg_window=50
