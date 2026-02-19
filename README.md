@@ -39,9 +39,11 @@ scripts/
 2.  Install dependencies:
 
 ```bash
-uv sync 
-# or 
-uv pip install fastapi uvicorn fastmcp numpy
+# Recommended: using uv (fast Python package manager)
+uv sync
+
+# Or using pip
+pip install -e .
 ```
 
 ### Running the Server
@@ -88,6 +90,12 @@ Run the included verification script to test the simulation dynamics:
 
 ```bash
 uv run python -m scripts.verify_backend
+```
+
+Or run the comprehensive test script to install dependencies, run tests, and verify the server:
+
+```bash
+python scripts/run_and_test.py
 ```
 
 ## 📚 API Documentation
